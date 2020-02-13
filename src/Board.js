@@ -248,11 +248,23 @@
     // test if a specific minor diagonal on this board contains a conflict
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
       var total = 0;
-      var row = this.rows().reverse(); // this is pretty hilarious
+      // var rowIndex = 0; // this is pretty hilarious
+      // var columnVariable = minorDiagonalColumnIndexAtFirstRow;
+      // var _n = this.get("n");
+      // for (
+      //   ;
+      //   rowIndex < total && columnVariable >= 0;
+      //   rowIndex++, columnVariable--
+      // ) {
+      //   if (columnVariable < _n) {
+      //     var row = this.get(rowIndex);
+      //     total += row[columnVariable];
+      //   }
+      // }
       var columnVariable = minorDiagonalColumnIndexAtFirstRow;
-      for (var index = 0; index < row.length; index++) {
-        if (row[index][columnVariable + index] !== undefined) {
-          total += row[index][columnVariable + index];
+      for (var index = 0; index < this.rows().length; index++) {
+        if (this.rows()[index][-(index - columnVariable)] === 1) {
+          total++;
         }
       }
       // // for (
@@ -268,6 +280,8 @@
       // // }
       // // // two for loops to iterate over row /column
       // // //iterate over this.rows()
+
+      // return total > 1;
       if (total > 1) {
         return true;
       }
@@ -278,8 +292,8 @@
     hasAnyMinorDiagonalConflicts: function() {
       console.log(this.rows());
       var _n = this.get("n");
-      var start = -(_n - 2);
-      for (var index = start; index <= 2 * _n - 3; index++) {
+
+      for (var index = 1; index <= 2 * _n - 3; index++) {
         console.log(index);
         //if hasAnyColConflicts(index), because hasAnyColConflicts takes in a number, then return true;
         if (this.hasMinorDiagonalConflictAt(index)) {
