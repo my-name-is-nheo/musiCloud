@@ -133,10 +133,7 @@
         }
       }
       // if total > 1 return true, meaning there is a conflict
-      if (total > 1) {
-        return true;
-      }
-      return false;
+      return total > 1;
     },
 
     // test if any rows on this board contain conflicts
@@ -165,11 +162,7 @@
         total += currentRow[i][colIndex];
       }
       // if total > 1 return true, meaning there is a conflict
-      if (total > 1) {
-        return true;
-      }
-
-      return false; // fixme
+      return total > 1; // fixme
     },
 
     // test if any columns on this board contain conflicts
@@ -212,10 +205,7 @@
       // // }
       // // // two for loops to iterate over row /column
       // // //iterate over this.rows()
-      if (total > 1) {
-        return true;
-      }
-      return false; // fixme
+      return total > 1; // fixme
       //I typeof === "number"
       //O boolean
       //C
@@ -282,10 +272,7 @@
       // // //iterate over this.rows()
 
       // return total > 1;
-      if (total > 1) {
-        return true;
-      }
-      return false;
+      return total > 1;
     },
 
     // test if any minor diagonals on this board contain conflicts
