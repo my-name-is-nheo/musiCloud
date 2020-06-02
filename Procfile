@@ -1,1 +1,1 @@
-web: open BoardViewer.html
+web: node server.js
