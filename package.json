@@ -1,0 +1,26 @@
+{
+  "name": "hrr44-n-queens",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/my-name-is-nheo/hrr44-n-queens.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/my-name-is-nheo/hrr44-n-queens/issues"
+  },
+  "homepage": "https://github.com/my-name-is-nheo/hrr44-n-queens#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
