@@ -120,11 +120,10 @@ section.blog-post-area .big-image {
 
 section.blog-post-area .big-text {
   left: 50%;
-
   position: relative;
   width: 50%;
   padding-right: 19px;
-  bottom: 352px;
+  bottom: 282px;
 }
 
 section.blog-post-area img {
