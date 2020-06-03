@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>n-rooks solver</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>n-queens solver</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="style.css" />
     <style type="text/css">
+
+html, body,#wrapper {
+    width: 100%;
+    min-height: 100%;
+}
       .square {
-        width: 30px;
-        height: 30px;
+        width: 80px;
+        height: 80px;
         text-align: center;
       }
 
@@ -20,10 +44,154 @@
       .inConflict {
         background-color: red;
       }
+      table {
+        position: relative;
+    right: 26.9%;
+    top: 382px;
+      }
+      .try{
+        position: relative;
+    bottom: 819px;
+    left: 312px;
+      }
+      #instructions{
+        position: relative;
+    bottom: 800px;
+    left: 315px;
+
+      }
     </style>
   </head>
   <body>
-    <script src="lib/jquery-1.8.3.js"></script>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="logo"></div>
+            </div>
+            <div class="col-md-10">
+              <div class="menu"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="bg-text-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="bg-text">
+                <h3>n-Queens</h3>
+                <p>courtesy of leetcode</p>
+                <p>
+                  The n-queens puzzle is the problem of placing n queens on an
+                  n×n chessboard such that no two queens attack each other.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blog-post-area">
+        <div class="container">
+          <div class="row">
+            <div class="blog-post-area-style">
+              <div class="col-md-12">
+                <div class="single-post-big">
+                  <div class="big-image">
+                    <img src="img/post-image1.jpg" alt="" />
+                  </div>
+                  <div class="board-div"></div>
+                  <div class="big-text">
+                    <h3><a href="#">Explanation</a></h3>
+                    <p>(courtesy of wikipedia)</p>
+                    <p>
+                      Chess composer Max Bezzel published the eight queens
+                      puzzle in 1848. The problem can be quite computationally
+                      expensive, as there are 4,426,165,368 (i.e., 64C8)
+                      possible arrangements of eight queens on an 8×8 board, but
+                      only 92 solutions. It is possible to use shortcuts that
+                      reduce computational requirements or rules of thumb that
+                      avoids brute-force computational techniques. For example,
+                      just by applying a simple rule that constrains each queen
+                      to a single column (or row), though still considered brute
+                      force, it is possible to reduce the number of
+                      possibilities to just 16,777,216 (that is, 88) possible
+                      combinations. Generating permutations further reduces the
+                      possibilities to just 40,320 (that is, 8!), which are then
+                      checked for diagonal attacks. The eight queens puzzle has
+                      92 distinct solutions. If solutions that differ only by
+                      symmetry operations (rotations and reflections) of the
+                      board are counted as one, the puzzle has 12 fundamental
+                      solutions. A fundamental solution usually has eight
+                      variants (including its original form) obtained by
+                      rotating 90, 180, or 270° and then reflecting each of the
+                      four rotational variants in a mirror in a fixed position.
+                      However, should a solution be equivalent to its own 90°
+                      rotation (as happens to one solution with five queens on a
+                      5x5 board), that fundamental solution will have only two
+                      variants (itself and its reflection). Should a solution be
+                      equivalent to its own 180° rotation (but not to its 90°
+                      rotation), it will have four variants (itself and its
+                      reflection, its 90° rotation and the reflection of that).
+                      It is not possible for a solution to be equivalent to its
+                      own reflection (except at n=1) because that would require
+                      two queens to be facing each other. (For n-queen problem's
+                      solution to be equivalent to its own mirror-image
+                      solution, the solution needs to be symmetrical by the
+                      center of the board either horizontally or vertically.
+                      Then, two queens would be facing each other, making it not
+                      a solution. ) Of the 12 fundamental solutions to the
+                      problem with eight queens on an 8x8 board, exactly one is
+                      equal to its own 180° rotation, and none is equal to its
+                      90° rotation; thus, the number of distinct solutions is
+                      11*8 + 1*4 = 92 (where the 8 is derived from four 90°
+                      rotational positions and their reflections, and the 4 is
+                      derived from two 180° rotational positions and their
+                      reflections). The different fundamental solutions are
+                      presented below:
+                    </p>
+                  </div>
+                </div>
+              </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer-bg">
+                <div class="row">
+                  <div class="col-md-9">
+                    <div class="footer-menu">
+                      <ul>
+                        <li class="active"><a href="mailto:nicholas.heo95@gmail.com">Nicholas Heo</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="footer-icon">
+                      <p>
+                        <a href="https://github.com/my-name-is-nheo"
+                          ><i class="fa fa-github" aria-hidden="true"></i></a
+                        ><a href="https://www.linkedin.com/in/nicholas-heo-201b44b6/"
+                          ><i class="fa fa-linkedin" aria-hidden="true"></i></a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                .
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/active.js"></script>
     <script src="lib/underscore.js"></script>
     <script src="lib/backbone.js"></script>
     <script src="src/Board.js"></script>
@@ -32,7 +200,7 @@
     <script>
       // This function uses a board visualizer lets you view an interactive version of any piece matrix.
       window.displayBoard = function (matrix) {
-        $("body").html(
+        $("div.board-div").html(
           new BoardView({
             model: new Board(matrix),
           }).render()
@@ -54,5 +222,16 @@
         countNQueensSolutions(n);
       });
     </script>
+    <div>
+      <h1 class = "try"> Try it yourself! </h1>
+    <div id="instructions">
+    <p>Remember, queens can move any number of </p>
+    <p> squares vertically,
+      horizontally or diagonally.</p>
+     <p> If the board turns red, there is a conflict</p>
+       <p> between the pieces! </p>
+    </div>
+  </div>
+
   </body>
 </html>
